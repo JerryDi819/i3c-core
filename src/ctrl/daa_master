@@ -1,3 +1,10 @@
+/* TODO:
+    1. How to handle PID arbitration
+    2. Which is the dynamic addr start num?
+    3. Compare with I2C
+    4. Doc down this module
+*/
+
 module daa_master
   import controller_pkg::*;
   import i3c_pkg::*;
@@ -5,7 +12,7 @@ module daa_master
     input logic clk,               // System clock
     input logic reset_n,           // Active-low reset
 
-    // Address Assignment Signals
+    // Address Assignment Signals (Hand-shake)
     input logic daa_start,         // Start dynamic address assignment
     output logic daa_done,         // Dynamic address assignment completed
 
